@@ -1,0 +1,41 @@
+﻿<Page x:Class="ProjectAdvert.PageStaff"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjectAdvert"
+      mc:Ignorable="d" 
+      d:DesignHeight="360" d:DesignWidth="800"
+      Title="PageStaff">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="SurnameTxtBx" Grid.Row="0"/>
+            <TextBox x:Name="NameTxtBx" Grid.Row="1"/>
+            <TextBox x:Name="LastnameTxtBx" Grid.Row="2"/>
+            <TextBox x:Name="SalaryTxtBx" Grid.Row="3"/>
+            <ComboBox x:Name="IdPosCmbBx" Grid.Row="4"/>
+
+            <TextBlock x:Name="MistakesTxtBlck" Grid.Row="5"/>
+
+            <Button x:Name="AddStaffBtn" Grid.Row="6" Content="Добавить сотрудника" Click="AddStaffBtn_Click"/>
+            <Button x:Name="UpdatetStaffBtn" Grid.Row="7" Content="Изменить данные сотрудника" Click="UpdateStaffBtn_Click"/>
+            <Button x:Name="DeleteStaffBtn" Grid.Row="8" Content="Удалить сотрудника" Click="DeleteStaffBtn_Click"/>
+        </Grid>
+        <DataGrid x:Name="StaffDtGrd" Grid.Column="0" SelectionChanged="StaffDtGrd_SelectionChanged"/>
+    </Grid>
+</Page>

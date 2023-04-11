@@ -1,0 +1,37 @@
+﻿<Window x:Class="ProjectAdvert.WindowMainAdmin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectAdvert"
+        mc:Ignorable="d"
+        Title="WindowMainAdmin" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="ToPageStaff" Grid.Column="0" Content="Сотрудники" FontSize="25" Click="ToPageStaff_Click"/>
+            <Button x:Name="ToPagePosition" Grid.Column="1" Content="Должность" FontSize="25" Click="ToPagePosition_Click"/>
+            <Button x:Name="ToPageAutoris" Grid.Column="2" Content="Логин и пароль" FontSize="25" Click="ToPageAutoris_Click"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="ToPageServiceBtn" Grid.Column="0" Content="Услуга" FontSize="25" Click="ServiceBtn_Click"/>
+            <Button x:Name="ToPageCarrierBtn" Grid.Column="1" Content="Носитель" FontSize="25" Click="CarrierBtn_Click"/>
+            <Button x:Name="ToPageOrderBtn" Grid.Column="2" Content="Заказ" FontSize="25" Click="OrderBtn_Click"/>
+        </Grid>
+        <Frame x:Name="PageFrame" Grid.Row="2" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

@@ -1,0 +1,35 @@
+﻿<Page x:Class="ProjectAdvert.PageService"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjectAdvert"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageService">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="KindTxtBx" Grid.Row="0"/>
+
+            <TextBlock x:Name="Mistkes" Grid.Row="2"/>
+
+            <Button x:Name="AddServiceBtn" Grid.Row="3" Content="Добавить услугу" Click="AddServiceBtn_Click"/>
+            <Button x:Name="UpdatetServiceBtn" Grid.Row="4" Content="Изменить данные услуги" Click="UpdateServiceBtn_Click"/>
+            <Button x:Name="DeleteServiceBtn" Grid.Row="5" Content="Удалить услугу" Click="DeleteServiceStaffBtn_Click"/>
+        </Grid>
+        <DataGrid x:Name="ServiceDtGrd" Grid.Column="0" SelectionChanged="ServiceDtGrd_SelectionChanged"/>
+    </Grid>
+</Page>

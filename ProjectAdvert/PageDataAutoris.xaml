@@ -1,0 +1,44 @@
+﻿<Page x:Class="ProjectAdvert.PageDataAutoris"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjectAdvert"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageDataAutoris">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Логин" FontSize="30" Grid.Row="0"/>
+            <TextBox x:Name="LoginTxtBx" Grid.Row="1"/>
+
+            <TextBlock Text="Пароль" FontSize="30" Grid.Row="2"/>
+            <TextBox x:Name="PasswordTxtBx" Grid.Row="3"/>
+            <ComboBox x:Name="IdPosCmbBx" Grid.Row="4"/>
+
+            <TextBlock x:Name="Mistakes" Grid.Row="6"/>
+
+            <Button x:Name="AddPositionBtn" Grid.Row="7" Content="Добавить логин и пароль" Click="AddAutorBtn_Click"/>
+            <Button x:Name="UpdatetPositionBtn" Grid.Row="8" Content="Изменить данные авторизации" Click="UpdateAutorBtn_Click"/>
+            <Button x:Name="DeletePositionBtn" Grid.Row="9" Content="Удалить логин и пароль" Click="DeleteAutorStaffBtn_Click"/>
+        </Grid>
+        <DataGrid x:Name="AutoDtGrd" Grid.Column="0" SelectionChanged="AutoDtGrd_SelectionChanged"/>
+    </Grid>
+</Page>
